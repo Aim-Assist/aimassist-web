@@ -97,7 +97,7 @@ const CheckOut = () => {
                             </Box>
                             <Grid container spacing={4}>
                                 <Grid item md={12} xs={12}>
-                                    <Table sx={{ minWidth: 700 }}>
+                                    <Table sx={{ minWidth: 300 }}>
                                         <TableHead>
                                             <TableRow>
                                                 <TableCell>
