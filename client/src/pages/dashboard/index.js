@@ -33,10 +33,9 @@ import { InformationCircleOutlined as InformationCircleOutlinedIcon } from "../.
 import { Reports as ReportsIcon } from "../../icons/reports";
 import { Users as UsersIcon } from "../../icons/users";
 import date from "date-and-time";
-import { CalendarEventDialog } from "../../components/dashboard/calendar/calendar-event-dialog";
-import { CalendarToolbar } from "../../components/dashboard/calendar/calendar-toolbar";
+
 import { gtm } from "../../lib/gtm";
-import { getEvents, updateEvent } from "../../slices/calendar";
+
 import { useDispatch, useSelector } from "../../store";
 import { useAuth, userAuth } from '../../hooks/use-auth';
 import { updateShorthandPropertyAssignment } from "typescript";
@@ -47,9 +46,7 @@ const Overview = () => {
   const [displayBanner, setDisplayBanner] = useState(true);
 
   const dispatch = useDispatch();
-  const calendarRef = useRef(null);
   const smDown = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-  const { events } = useSelector((state) => state.calendar);
   const [sdate, setDate] = useState(new Date());
   const [view, setView] = useState(smDown ? "timeGridDay" : "dayGridMonth");
   const [dialog, setDialog] = useState({
